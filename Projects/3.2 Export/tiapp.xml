@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>con.mykoo.windows</id>
-    <name>Day2Lecture</name>
+    <id>com.mykoo</id>
+    <name>3.2 Export</name>
     <version>1.0</version>
     <publisher>RoshanM</publisher>
     <url>http://</url>
-    <description>undefined</description>
+    <description/>
     <copyright>2015 by RoshanM</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>783caed4-de02-4309-8c97-0bafb8984b5d</guid>
+    <guid>d6554e0f-4cc4-48db-af5c-278403a01d65</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>

@@ -5,10 +5,9 @@ var myFunc = function (){
 	var command ="do things";
 };
 
-console.log(command);*/
+console.log(command);
 
 //Require Example
-var message = "Hello World";
-
-
-require('second');
+var loadFile  = require ('second');
+console.log(loadFile.message);	
+*/

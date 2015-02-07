@@ -1,1 +1,2 @@
-console.log(message);
+/*message = "Hello world";
+exports.message = message;*/

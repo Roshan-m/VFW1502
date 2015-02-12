@@ -48,11 +48,11 @@ tableView.add(table);
 //array
 var games = {
  Ps4 :[ 
- 	{title:"Destiny"},
-	{title:"Shadow of Mordor"},
-	{title:"Infamous Second Son"},
-	{title:"FarCry4"},
-	{title:"Grand Theft Auto V"}],
+ 	{title:"Destiny", description:"7.8"},
+	{title:"Shadow of Mordor", description:"9.3"},
+	{title:"Infamous Second Son", description:"8.7"},
+	{title:"FarCry4", description:"8.5"},
+	{title:"Grand Theft Auto V", description:"10"}],
  XboxOne :[
 	{title:"Call of Duty Advanced Warfare"},
 	{title:"Halo: Master Cheif Collection "},

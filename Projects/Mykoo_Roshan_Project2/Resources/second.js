@@ -79,6 +79,9 @@ for(n in games){
 	 var section = Ti.UI.createTableViewSection({
 		headerTitle:n,
 	});
+	section.addEventListener('click', function(){
+	console.log();
+});
 	for(i=0;i<games[n].length;i++){
 	 	var row = Ti.UI.createTableViewRow({
 	 		title: games[n][i].title,

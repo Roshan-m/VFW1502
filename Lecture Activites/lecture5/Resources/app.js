@@ -1,64 +1,31 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
-Titanium.UI.setBackgroundColor('#000');
-
-// create tab group
-var tabGroup = Titanium.UI.createTabGroup();
-
-
-//
-// create base UI tab and root window
-//
-var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
-    backgroundColor:'#fff'
-});
-var tab1 = Titanium.UI.createTab({  
-    icon:'KS_nav_views.png',
-    title:'Tab 1',
-    window:win1
+var win2 = Titanium.UI.createWindow({
+    backgroundColor: 'red',
+    title: 'Red Window'
 });
 
-var label1 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 1',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+var win1 = Titanium.UI.iOS.createNavigationWindow({
+   window: win2
 });
 
-win1.add(label1);
-
-//
-// create controls tab and root window
-//
-var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
-    backgroundColor:'#fff'
-});
-var tab2 = Titanium.UI.createTab({  
-    icon:'KS_nav_ui.png',
-    title:'Tab 2',
-    window:win2
+var win3 = Titanium.UI.createWindow({
+    backgroundColor: 'blue',
+    title: 'Blue Window'
 });
 
-var label2 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+var button = Titanium.UI.createButton({
+    title: 'Open Blue Window'
+});
+button.addEventListener('click', function(){
+    win1.openWindow(win3, {animated:true});
 });
 
-win2.add(label2);
+win2.add(button);
+var button2 = Titanium.UI.createButton({
+    title: 'Close Blue Window'
+});
+button2.addEventListener('click', function(){
+    win1.closeWindow(win3, {animated:false}); //win3.close() will also work!!
+});
 
-
-
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
-
-
-// open tab group
-tabGroup.open();
+win3.add(button2);
+win1.open();

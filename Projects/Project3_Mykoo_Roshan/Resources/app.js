@@ -1,6 +1,21 @@
-var win1= Ti.UI.createWindow({
+var pwidth = Ti.Platform.displayCaps.platformWidth;
+
+var win= Ti.UI.createWindow({
 	backgroundColor:"#cccccc",
-	headerTitle: 'My Favorite Album Art',
+	title: 'Favorite Albums',
+	titleControl : Titanium.UI.View,
 });
 
-win1.open();
+var winScroll = Ti.UI.createScrollView({
+	layout: 'horizontal',
+	contentWidth: pwidth,
+});
+
+
+var loadFile = require('second');
+
+win.add(winScroll);
+win.add(loadFile.imageSquare);
+win.add(loadFile.galleryList);
+win.add(loadFile.gallery);
+win.open();

@@ -39,6 +39,11 @@ tableView.addEventListener('click',function(){
 	win2.add(windowTable);
 });
 
+listView.addEventListener('click',function(){
+	nav.openWindow(win3);
+	win3.add();
+});
+
 nav.open();
 
 listView.add(list);
@@ -92,7 +97,19 @@ for(n in games){
 }
 windowTable.setData(sections);
 
-
+//Listview
+var windowList = Ti.UI.createListView();
+//sections
+var sections2 =[];
+for(n in games){
+	 var section2 = Ti.UI.createListSection({
+		headerTitle:n,
+	});
+	section2.addEventListener('click', function(){
+});
+	sections2.push(section);
+}
+windowList.setData(sections2);
 
 exports.tableView=tableView;
 exports.listView=listView;

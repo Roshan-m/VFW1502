@@ -5,6 +5,7 @@ var win1 =Ti.UI.createWindow({
 var nav = Titanium.UI.iOS.createNavigationWindow({
    window: win1
 });
+var loadFile= require('second');
 
 var win2= Ti.UI.createWindow({
 	title:'Best Games of 2014 by Console',
@@ -12,10 +13,9 @@ var win2= Ti.UI.createWindow({
 var win3= Ti.UI.createWindow({
 	title:'Best Games of 2014',
 });
-var loadFile= require('second');
 
 
-
+win3.add(loadFile.windowList);
 
 
 win1.open();

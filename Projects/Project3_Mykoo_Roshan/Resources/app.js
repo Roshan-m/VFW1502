@@ -5,17 +5,25 @@ var win= Ti.UI.createWindow({
 	title: 'Favorite Albums',
 	titleControl : Titanium.UI.View,
 });
+var nav = Titanium.UI.iOS.createNavigationWindow({
+	window: win,
+});
 
 var winScroll = Ti.UI.createScrollView({
 	layout: 'horizontal',
 	contentWidth: pwidth,
 });
-var clickWin = Ti.UI.createWindow();
 
-var loadFile = require('second');
+//Click window to scrollable window
+
+
+var loadSecond = require('second');
+var loadScrollable = require('scrollable');
+
+winScroll.add(loadSecond.clickWin);
 
 win.add(winScroll);
-win.add(loadFile.imageSquare);
-win.add(loadFile.galleryList);
-win.add(loadFile.gallery);
-win.open();
+win.add(loadSecond.imageSquare);
+win.add(loadSecond.galleryList);
+win.add(loadSecond.gallery);
+nav.open();

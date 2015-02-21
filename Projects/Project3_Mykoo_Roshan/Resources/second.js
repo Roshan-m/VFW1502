@@ -9,6 +9,10 @@ for(var i=0; i<galleryList.length; i++){
 			width: 106,
 			borderColor :'white',
 	});
+	imageSquare.addEventListener('click', function(){
+		clickWin.open();
+		console.log(imageSquare);
+	});
 winScroll.add(imageSquare);
 };
 

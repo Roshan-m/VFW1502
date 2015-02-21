@@ -10,7 +10,7 @@ var winScroll = Ti.UI.createScrollView({
 	layout: 'horizontal',
 	contentWidth: pwidth,
 });
-
+var clickWin = Ti.UI.createWindow();
 
 var loadFile = require('second');
 

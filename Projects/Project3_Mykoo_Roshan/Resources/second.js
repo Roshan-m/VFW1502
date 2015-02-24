@@ -10,10 +10,12 @@ for(var i=0; i<galleryList.length; i++){
 			height: 106,
 			width: 106,
 			borderColor :'white',
+			id:i,
 	});
-	imageSquare.addEventListener('click', function(){
-		loadScrollable2.clickWin.open();
-		console.log(imageSquare);
+	imageSquare.addEventListener('click', function(e){
+		loadScrollable2.scrollableView.currentPage= e.source.id
+		nav.openWindow(loadScrollable2.clickWin);
+		console.log(e.source.id);
 	});
 winScroll.add(imageSquare);
 };
@@ -21,4 +23,3 @@ winScroll.add(imageSquare);
 
 exports.gallery=gallery;
 exports.galleryList=galleryList;
-

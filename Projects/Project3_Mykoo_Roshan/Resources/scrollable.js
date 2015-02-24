@@ -4,7 +4,9 @@ var galleryListScroll = galleryScroll.getDirectoryListing();
 
 var images= [];
 
-var clickWin = Ti.UI.createWindow();
+var clickWin = Ti.UI.createWindow({
+	backgroundColor:'black',
+});
 
 
 //Loop

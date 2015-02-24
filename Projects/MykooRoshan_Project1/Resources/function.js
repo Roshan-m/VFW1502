@@ -35,10 +35,23 @@ var game = 0;
 
 //Event Listeners
 previousBox.addEventListener('click',function(){
-	alert("You clicked Previous!");
+	myLabel.text= fpsGames[game];
+	if(game<=fpsGames.length){
+	game--;
+	console.log("Incremented");
+}else{
+	game=0;
+};
 });
+
 nextBox.addEventListener('click',function(){
-	alert("You Clicked Next");
+	myLabel.text= fpsGames[game];
+	if(game<=fpsGames.length){
+	game++;
+	console.log("Incremented");
+}else{
+	game=0;
+};
 });
 //Array Logic
 view1.addEventListener('click',function(){

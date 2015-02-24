@@ -14,7 +14,7 @@ var win3= Ti.UI.createWindow({
 	title:'Best Games of 2014',
 });
 
-
+console.log(loadFile.windowList);
 win3.add(loadFile.windowList);
 
 

@@ -21,9 +21,11 @@ var theImage = Ti.UI.createImageView({
 	scrollView.add(theImage);
 	images.push(scrollView);
 };
+
 var scrollableView = Ti.UI.createScrollableView({
 	showPagingControl:true,
 	views: images,
+	//currentPage:,
 });
 
 

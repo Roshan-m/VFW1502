@@ -146,11 +146,11 @@ var windowList = Ti.UI.createListView();
 //sections
 var sections2 =[];
 
-windowList.addEventListener('click', function(){
+windowList.addEventListener('itemclick', function(){
 		nav.openWindow(listDetail);
 		listDetail.add(listDetailView);
 
-	console.log();
+	console.log("hello");
 });
 
 

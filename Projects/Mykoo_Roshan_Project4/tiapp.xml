@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.mykoo.lect</id>
-    <name>Lecture 9</name>
+    <id>com.mykoo.proj</id>
+    <name>Mykoo_Roshan_Project4</name>
     <version>1.0</version>
     <publisher>RoshanM</publisher>
     <url>http://</url>
-    <description>undefined</description>
+    <description/>
     <copyright>2015 by RoshanM</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>0b3b3feb-462a-41ec-904c-6ba4da5933dc</guid>
+    <guid>188059c1-25df-4c10-a870-63cfdfbf9dd8</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>

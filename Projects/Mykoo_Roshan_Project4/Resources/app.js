@@ -1,64 +1,71 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
-Titanium.UI.setBackgroundColor('#000');
-
-// create tab group
-var tabGroup = Titanium.UI.createTabGroup();
-
-
-//
-// create base UI tab and root window
-//
-var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
-    backgroundColor:'#fff'
+var win = Ti.UI.createWindow({
+	backgroundImage:'vidgamebackground.jpg',
+	title:'We <3 Video Games',
 });
-var tab1 = Titanium.UI.createTab({  
-    icon:'KS_nav_views.png',
-    title:'Tab 1',
-    window:win1
+var nav = Ti.UI.iOS.createNavigationWindow({
+	window:win,
+	backgroundColor:"#f91574",
 });
 
-var label1 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 1',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+nav.open();
+var load2 = require('window2');
+var load3 = require('window3');
+var load4 = require('window4');
+
+
+var button1= Ti.UI.createView({
+	width:200,
+	height:40,
+	borderColor:'black',
+	backgroundColor:'white',
+	top:100,
+});
+var comPicks = Ti.UI.createLabel({
+	text:'Community Favorites',
+	color: 'Black',
+});
+button1.add(comPicks);
+
+var button2= Ti.UI.createView({
+	width:200,
+	height:40,
+	borderColor:'black',
+	backgroundColor:'white',
+	top:200,
+});
+var goty = Ti.UI.createLabel({
+	text:'Games Of the Year',
+	color:'black',
+});
+button2.add(goty);
+
+var button3= Ti.UI.createView({
+	width:200,
+	height:40,
+	borderColor:'black',
+	backgroundColor:'white',
+	top:300,
+});
+var labelb3 = Ti.UI.createLabel({
+	text: 'title',
+	color: 'black',
+});
+button3.add(labelb3);
+
+button1.addEventListener('click', function(){
+	nav.openWindow(load2.randomPicture);
 });
 
-win1.add(label1);
-
-//
-// create controls tab and root window
-//
-var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
-    backgroundColor:'#fff'
-});
-var tab2 = Titanium.UI.createTab({  
-    icon:'KS_nav_ui.png',
-    title:'Tab 2',
-    window:win2
+button2.addEventListener('click', function(){
+	nav.openWindow(load3.winList);
 });
 
-var label2 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+button3.addEventListener('click', function(){
+	nav.openWindow(load4.win4);
 });
 
-win2.add(label2);
 
-
-
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
-
-
-// open tab group
-tabGroup.open();
+win.add(button1, button2, button3);
+//random view of images
+//list of data
+//present information with extra features

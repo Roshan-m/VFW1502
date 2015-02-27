@@ -17,7 +17,7 @@ var button1= Ti.UI.createView({
 	width:200,
 	height:40,
 	borderColor:'black',
-	backgroundColor:'white',
+	backgroundColor:'#ffd9eb',
 	top:100,
 });
 var comPicks = Ti.UI.createLabel({
@@ -30,7 +30,7 @@ var button2= Ti.UI.createView({
 	width:200,
 	height:40,
 	borderColor:'black',
-	backgroundColor:'white',
+	backgroundColor:'#ffd9eb',
 	top:200,
 });
 var goty = Ti.UI.createLabel({
@@ -43,11 +43,11 @@ var button3= Ti.UI.createView({
 	width:200,
 	height:40,
 	borderColor:'black',
-	backgroundColor:'white',
+	backgroundColor:'#ffd9eb',
 	top:300,
 });
 var labelb3 = Ti.UI.createLabel({
-	text: 'title',
+	text: 'Share With Firends',
 	color: 'black',
 });
 button3.add(labelb3);

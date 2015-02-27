@@ -2,7 +2,7 @@ var randomPicture = Ti.UI.createWindow({
 	backgroundColor: '#9779D2',
 
 });
-
+//math.randomnumber to i in for loop <number of pictures or length of array
 var buttonView = Ti.UI.createView({
 	height : 40,
 	width : 200,

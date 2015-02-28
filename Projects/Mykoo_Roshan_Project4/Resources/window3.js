@@ -29,6 +29,6 @@ windowList.addEventListener('itemclick', function(){
 });
 
 
-winList.add(windowTable);
+winList.add(windowList);
 
 exports.winList=winList;

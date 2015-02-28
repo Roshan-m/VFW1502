@@ -62,6 +62,7 @@ button2.addEventListener('click', function(){
 
 button3.addEventListener('click', function(){
 	nav.openWindow(load4.win4);
+	
 });
 
 

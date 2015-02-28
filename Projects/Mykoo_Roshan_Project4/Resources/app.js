@@ -47,17 +47,17 @@ var button3= Ti.UI.createView({
 	top:300,
 });
 var labelb3 = Ti.UI.createLabel({
-	text: 'Share With Firends',
+	text: 'Gameplay Viewer',
 	color: 'black',
 });
 button3.add(labelb3);
 
 button1.addEventListener('click', function(){
-	nav.openWindow(load2.randomPicture);
+	nav.openWindow(load2.win2);
 });
 
 button2.addEventListener('click', function(){
-	nav.openWindow(load3.winList);
+	nav.openWindow(load3.win3);
 });
 
 button3.addEventListener('click', function(){

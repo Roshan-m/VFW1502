@@ -1,4 +1,4 @@
-var randomPicture = Ti.UI.createWindow({
+var win2 = Ti.UI.createWindow({
 	backgroundColor: '#9779D2',
 
 });
@@ -6,7 +6,7 @@ var randomPicture = Ti.UI.createWindow({
 var buttonView = Ti.UI.createView({
 	height : 40,
 	width : 200,
-	bottom: 100,
+	bottom: 80,
 	borderColor: 'white',
 	backgroundGradient: {
 		type: 'linear',
@@ -37,8 +37,24 @@ button.addEventListener('click', function() {
 	alert('button was clicked!');
 });
 
+var gallery = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'images');
+
+var  galleryList= gallery.getDirectoryListing();
+
+for(var i=0; i<galleryList.length; i++){
+var imageSquare = Ti.UI.createImageView({ 
+			image: 'images/' + galleryList[i],
+			height: 314,
+			width: 220,
+			borderColor :'white',
+			id:i,
+			top: 10,
+	});
+};
+
 // Add to the parent view.
 buttonView.add(button);
 
-randomPicture.add(buttonView);
-exports.randomPicture=randomPicture;
+win2.add(imageSquare);
+win2.add(buttonView);
+exports.win2=win2;
